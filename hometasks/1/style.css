@@ -1,0 +1,19 @@
+body {
+  background-color: beige;
+  font-family: "Noto Serif", serif;
+}
+
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li {
+  display: inline;
+  padding: 8px;
+}
+
+.movie-description {
+  line-height: 1.5;
+}
