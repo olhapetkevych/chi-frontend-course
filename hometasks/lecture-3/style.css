@@ -1,0 +1,60 @@
+body {
+  background-color: ivory;
+  font-family: "Montserrat", sans-serif;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input[type="submit"] {
+  margin-top: 8px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.col-20 {
+  float: left;
+  width: 20%;
+  margin-top: 8px;
+}
+
+.col-80 {
+  float: left;
+  width: 80%;
+  margin-top: 8px;
+}
+
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li {
+  display: inline;
+  padding: 8px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.section-additional-info {
+  margin-top: 128px;
+}
+
+.table-books {
+  border-collapse: collapse;
+}
+
+.table-books th,
+td {
+  border: 1px solid;
+  padding: 12px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Бібліотека - список популярних книг</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">&larr; На головну</a>
+      <h1>Список популярних книг</h1>
+    </header>
+    <main>
+      <table class="table-books">
+        <thead>
+          <tr>
+            <th>Назва книги</th>
+            <th>Автор</th>
+            <th>Рейтинг</th>
+            <th>Прослухати фрагмент</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Приклад книги</td>
+            <td>Автор Приклад</td>
+            <td>90%</td>
+            <td>
+              <audio
+                controls
+                src="media/file_example_MP3_700KB.mp3"
+                type="audio/mpeg"
+              ></audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Приклад книги 2</td>
+            <td>Автор Приклад2</td>
+            <td>89%</td>
+            <td>
+              <audio
+                controls
+                src="media/file_example_WAV_5MG.wav"
+                type="audio/vnd.wave"
+              ></audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Приклад книги 3</td>
+            <td>Автор Приклад3</td>
+            <td>87%</td>
+            <td>
+              <audio
+                controls
+                src="media/file_example_OOG_1MG.ogg"
+                type="audio/ogg"
+              ></audio>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

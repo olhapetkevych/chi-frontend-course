@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Бібліотека - головна</title>
+  </head>
+  <body>
+    <header><h1>Бібліотека</h1></header>
+    <nav>
+      <ul class="main-menu">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="books_list.html">Список популярних книг</a></li>
+        <li><a href="about_us.html">Про нашу бібліотеку</a></li>
+        <li><a href="add_book.html">Додати нову книгу</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="section-additional-info">
+        <h2>Додаткова інформація</h2>
+        <p>
+          Ви можете додати додаткову інформацію тут, наприклад, використовуючи
+          <abbr title="Hyper Text Markup Language">HTML</abbr> або інші елементи,
+          які ви вважаєте корисними.
+        </p>
+        <blockquote>
+          "Це цитата з іншого джерела про важливість читання."
+        </blockquote>
+        <cite>- Відома людина</cite>
+        <pre>
+Заздалегідь 
+          відформатований 
+          текст</pre
+        >
+        <code>package streams;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Test9 {
+    public static void main(String[] args) throws IOException {
+        List<String> lines = new ArrayList<>();
+        lines.add("asdf 123 asdf 1234 as 123");
+        lines.add("as 123 asdf 123 asd 123");
+
+        List<String> words = lines.stream()
+                .flatMap(line -> Arrays.stream(line.split("\\s+")))
+                .collect(Collectors.toList());
+
+        System.out.println(words);
+
+        Object o = lines.stream()
+                .flatMap(line -> Arrays.stream(line.split("\\s+")))
+                .collect(Collectors.toMap(w -> w, w -> 1, Integer::sum));
+
+        System.out.println(o);
+
+        lines.stream()
+                .flatMap(line -> Arrays.stream(line.split("\\s+")))
+                .collect(Collectors.toMap(w -> w, w -> 1, Integer::sum))
+                .entrySet()
+                .stream() // Map.Entry  key, value
+                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
+                .map(e -> e.getKey() + " ==> " + e.getValue())
+                .forEach(System.out::println);
+    }
+
+}
+</code>
+</section>
+      <!--<h2>Список популярних книг</h2>
+      <table class="table-books">
+        <thead>
+          <tr>
+            <th>Назва книги</th>
+            <th>Автор</th>
+            <th>Рейтинг</th>
+            <th>Прослухати фрагмент</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Приклад книги</td>
+            <td>Автор Приклад</td>
+            <td>90%</td>
+            <td>
+              <audio
+                controls
+                src="media/file_example_MP3_700KB.mp3"
+                type="audio/mpeg"
+              ></audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Приклад книги 2</td>
+            <td>Автор Приклад2</td>
+            <td>89%</td>
+            <td>
+              <audio
+                controls
+                src="media/file_example_WAV_5MG.wav"
+                type="audio/vnd.wave"
+              ></audio>
+            </td>
+          </tr>
+          <tr>
+            <td>Приклад книги 3</td>
+            <td>Автор Приклад3</td>
+            <td>87%</td>
+            <td>
+              <audio
+                controls
+                src="media/file_example_OOG_1MG.ogg"
+                type="audio/ogg"
+              ></audio>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Про нашу бібліотеку</h2>
+      <video
+        controls
+        src="media/file_example_MP4_480_1_5MG.mp4"
+        type="video/mp4"
+      ></video>
+      <h2>Додати нову книгу</h2>
+      <form action="">
+        <input type="text" name="" id="" />
+        <input type="text" name="" id="" />
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </form>-->
+    </main>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Бібліотека - додавання книги</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">&larr; На головну</a>
+      <h1>Додати нову книгу</h1>
+    </header>
+    <main>
+      <form action="">
+        <div class="row">
+          <div class="col-20">
+            <label for="bname">Назва книги:</label>
+          </div>
+          <div class="col-80">
+            <input type="text" name="bname" id="bname" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-20">
+            <label for="bauthor">Автор:</label>
+          </div>
+          <div class="col-80">
+            <input type="text" name="bauthor" id="bauthor" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-20">
+            <label for="bdesc">Опис:</label>
+          </div>
+          <div class="col-80">
+            <textarea name="bdesc" id="bdesc" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-20">
+            <label for="brating">Рейтинг:</label>
+          </div>
+          <div class="col-80">
+            <input type="range" name="brating" id="brating" min="1" max="100" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-20">
+            <label for="bpic">Зображення обкладинки:</label>
+          </div>
+          <div class="col-80">
+            <input type="file" name="bpic" id="bpic" accept="image/*" />
+          </div>
+        </div>
+        <div class="row"><input type="submit" value="Додати книгу" /></div>
+      </form>
+    </main>
+  </body>
+</html>
