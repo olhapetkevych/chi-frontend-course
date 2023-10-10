@@ -1,0 +1,15 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  border: 1px solid silver;
+  flex: auto;
+  margin: 16px;
+  padding: 16px;
+}
+
+.second-card {
+  background-color: gainsboro;
+}

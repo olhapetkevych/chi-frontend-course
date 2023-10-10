@@ -1,0 +1,15 @@
+.list-item:first-child {
+  color: red;
+}
+.list-item:last-child {
+  font-weight: bold;
+}
+.list-item:nth-child(even) {
+  background-color: gainsboro;
+}
+.list-item::before {
+  content: " - ";
+}
+.list-item:hover {
+  background-color: gray;
+}
