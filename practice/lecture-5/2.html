@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      var data;
+      function setData() {
+        data = {
+          sname: document.getElementById("sname").value,
+          spec: document.getElementById("spec").value,
+        };
+      }
+      function getData() {
+        alert("Ім'я: " + data.sname + "\nСпеціальність: " + data.spec);
+      }
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="sname" onblur="setData()" />
+    <input type="text" name="" id="spec" onblur="setData()" />
+    <button onclick="getData()">Вивести дані</button>
+  </body>
+</html>
