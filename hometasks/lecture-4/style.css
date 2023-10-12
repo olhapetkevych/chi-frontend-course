@@ -1,0 +1,82 @@
+:root {
+  --color-accent: orange;
+  --color-darker-background: whitesmoke;
+  --color-project-card-border: gainsboro;
+  --color-text-main: #101010;
+}
+
+body {
+  color: var(--color-text-main);
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+h1::before,
+h1::after {
+  color: var(--color-accent);
+  content: "★";
+}
+
+header {
+  align-items: center;
+  background-color: var(--color-darker-background);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.contacts-list {
+  font-style: normal;
+}
+
+.contacts-list,
+.main-menu,
+.projects-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts-list li {
+  margin: 12px 0px;
+}
+
+.contacts-list a,
+.main-menu a {
+  color: var(--color-text-main);
+  text-decoration: none;
+}
+
+.contacts-list a:hover,
+.contacts-list a:focus,
+.main-menu a:hover,
+.main-menu a:focus {
+  text-decoration: underline;
+}
+
+.contacts-list li:last-child {
+  font-weight: bold;
+}
+
+.first-item + li {
+  background-color: var(--color-darker-background);
+}
+
+.main-menu {
+  display: flex;
+}
+
+.main-menu li {
+  padding: 12px;
+}
+
+.projects-list li {
+  border: 1px solid var(--color-project-card-border);
+  margin: 16px 0px;
+  padding: 16px;
+}
