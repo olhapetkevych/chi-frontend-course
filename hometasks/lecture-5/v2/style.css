@@ -1,0 +1,18 @@
+button {
+  margin: 4px;
+  padding: 8px;
+}
+
+.calc-button {
+  margin-left: 16px;
+}
+
+.calculator {
+  display: flex;
+}
+
+.operators {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Калькулятор</title>
+  </head>
+  <body>
+    <header><h1>Калькулятор</h1></header>
+    <main>
+      <p id="result"></p>
+      <div class="calculator">
+        <div class="numbers">
+          <div class="row">
+            <button onclick="numberButtonClick(this)">7</button
+            ><button onclick="numberButtonClick(this)">8</button
+            ><button onclick="numberButtonClick(this)">9</button>
+          </div>
+          <div class="row">
+            <button onclick="numberButtonClick(this)">4</button
+            ><button onclick="numberButtonClick(this)">5</button
+            ><button onclick="numberButtonClick(this)">6</button>
+          </div>
+          <div class="row">
+            <button onclick="numberButtonClick(this)">1</button
+            ><button onclick="numberButtonClick(this)">2</button
+            ><button onclick="numberButtonClick(this)">3</button>
+          </div>
+          <div class="row">
+            <button onclick="numberButtonClick(this)">0</button>
+          </div>
+        </div>
+        <div class="operators">
+          <button onclick="addNumberClick()">+</button
+          ><button onclick="subtractNumberClick()">-</button
+          ><button onclick="multiplyButtonClick()">*</button
+          ><button onclick="divideButtonClick()">/</button>
+        </div>
+        <button class="calc-button">=</button>
+      </div>
+    </main>
+  </body>
+</html>
