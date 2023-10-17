@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <title>Калькулятор</title>
+  </head>
+  <body>
+    <input type="text" onblur="firstInputBlur(this)" />
+    <input type="text" onblur="secondInputBlur(this)" />
+    <select onblur="signBlur(this)">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <button onclick="calcButtonClick()">Розрахувати</button>
+  </body>
+</html>
