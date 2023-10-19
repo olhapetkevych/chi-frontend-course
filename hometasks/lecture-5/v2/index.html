@@ -10,36 +10,43 @@
   <body>
     <header><h1>Калькулятор</h1></header>
     <main>
-      <p id="result"></p>
       <div class="calculator">
         <div class="numbers">
           <div class="row">
-            <button onclick="numberButtonClick(this)">7</button
-            ><button onclick="numberButtonClick(this)">8</button
-            ><button onclick="numberButtonClick(this)">9</button>
+            <button onclick="inputButtonClick(value)" value="7">7</button
+            ><button onclick="inputButtonClick(value)" value="8">8</button
+            ><button onclick="inputButtonClick(value)" value="9">9</button>
           </div>
           <div class="row">
-            <button onclick="numberButtonClick(this)">4</button
-            ><button onclick="numberButtonClick(this)">5</button
-            ><button onclick="numberButtonClick(this)">6</button>
+            <button onclick="inputButtonClick(value)" value="4">4</button
+            ><button onclick="inputButtonClick(value)" value="5">5</button
+            ><button onclick="inputButtonClick(value)" value="6">6</button>
           </div>
           <div class="row">
-            <button onclick="numberButtonClick(this)">1</button
-            ><button onclick="numberButtonClick(this)">2</button
-            ><button onclick="numberButtonClick(this)">3</button>
+            <button onclick="inputButtonClick(value)" value="1">1</button
+            ><button onclick="inputButtonClick(value)" value="2">2</button
+            ><button onclick="inputButtonClick(value)" value="3">3</button>
           </div>
           <div class="row">
-            <button onclick="numberButtonClick(this)">0</button>
+            <button onclick="signButtonClick()">±</button>
+            <button onclick="inputButtonClick(value)" value="0">0</button>
+            <button onclick="inputButtonClick(value)" value=",">,</button
+            ><!--"comaButtonClick()"-->
           </div>
         </div>
         <div class="operators">
-          <button onclick="addNumberClick()">+</button
+          <button onclick="operatorButtonClick(value)" value="+">+</button
+          ><button onclick="operatorButtonClick(value)" value="-">-</button
+          ><button onclick="operatorButtonClick(value)" value="*">×</button
+          ><button onclick="operatorButtonClick(value)" value="/">÷</button>
+          <!--<button onclick="addNumberClick()">+</button
           ><button onclick="subtractNumberClick()">-</button
-          ><button onclick="multiplyButtonClick()">*</button
-          ><button onclick="divideButtonClick()">/</button>
+          ><button onclick="multiplyButtonClick()">×</button
+          ><button onclick="divideButtonClick()">÷</button>-->
         </div>
-        <button class="calc-button">=</button>
+        <button class="calc-button" onclick="calcButtonClick()">=</button>
       </div>
+      <p id="result" class="result"></p>
     </main>
   </body>
 </html>

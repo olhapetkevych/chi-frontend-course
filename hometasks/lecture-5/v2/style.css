@@ -1,4 +1,9 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
 button {
+  font-family: inherit;
   margin: 4px;
   padding: 8px;
 }
@@ -15,4 +20,8 @@ button {
   display: flex;
   flex-direction: column;
   margin-left: 12px;
+}
+
+.row {
+  display: flex;
 }
