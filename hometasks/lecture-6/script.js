@@ -1,28 +1,49 @@
-let lessons;
+//Початковий варіант - без кешування
+const daysOfWeek = [
+  "Понеділок",
+  "Вівторок",
+  "Середа",
+  "Четвер",
+  "П'ятниця",
+  "Субота",
+  "Неділя",
+];
 
+const prompts = ["день тижня", "тривалість", "назву"];
+
+let lessons;
 window.addEventListener("load", (event) => {
     lessons = document.getElementById("lessons");
 });
 
 function addLesson() {
     const row = document.createElement("tr");
-    for (let j = 0; j < 3; j++) {
-      // Create a <td> element and a text node, make the text
-      // node the contents of the <td>, and put the <td> at
-      // the end of the table row
-      const cell = document.createElement("td");
-      const cellText = document.createTextNode(j);
-      cell.appendChild(cellText);
-      row.appendChild(cell);
+    for (let i = 0; i < 3; i++) {
+        const cell = document.createElement("td");
+        cell.addEventListener("click", (element, index = i) => {
+            const input = prompt("Введіть " + prompts[index]);
+            if (input === null) {
+                return;
+            }
+            if (index === 0 && !daysOfWeek.includes(input)) {
+                alert("Некоректний день тижня!");
+                return;
+            }
+            if (index === 1 && isNaN(input) || Number.parseFloat(input) <= 0) {
+                alert("Некоректна тривалість!");
+                return;
+            }
+            element.target.innerText = input;
+        });
+        row.appendChild(cell);
     }
     const cell = document.createElement("td");
-    let button = document.createElement('button');
+    const button = document.createElement("button");
+    button.className = "button-delete";
     button.addEventListener("click", (element) => {
-        //let i = r.parentNode.parentNode.rowIndex;
-        //document.getElementById("myTable").deleteRow(i);
+        element.target.parentNode.parentNode.remove();
     });
-    let text = document.createTextNode("Видалити");
-    button.appendChild(text);
+    button.appendChild(document.createTextNode("Видалити"));
     cell.appendChild(button);
     row.appendChild(cell);
     lessons.appendChild(row);

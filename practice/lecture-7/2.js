@@ -1,4 +1,4 @@
-let tasks = [];
+let tasks = [];//const!!!
 tasks.push('Купити хліб', 'Зробити завданння', 'Пройти 10 км');
 console.log(tasks.length);
 let last = tasks.pop();
