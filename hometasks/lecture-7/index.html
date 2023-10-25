@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Розклад уроків</title>
+  </head>
+  <body>
+    <header><h1>Розклад уроків</h1></header>
+    <main>
+      <table>
+        <thead>
+          <th>День тижня</th>
+          <th>Тривалість (год.)</th>
+          <th>Назва</th>
+          <th></th>
+        </thead>
+        <tbody id="lessons"></tbody>
+      </table>
+      <button class="button-add" onclick="addLesson()">Додати урок</button>
+      <div class="container-cash">
+        <button class="button-cash" onclick="addToCash()">Додати в кеш</button>
+        <button class="button-cash" onclick="showCash()">Показати кеш</button>
+      </div>
+    </main>
+  </body>
+</html>

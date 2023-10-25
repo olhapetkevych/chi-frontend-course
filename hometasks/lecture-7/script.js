@@ -1,5 +1,3 @@
-//Початковий варіант - без кешування
-
 const daysOfWeek = [
   "Понеділок",
   "Вівторок",
@@ -48,4 +46,25 @@ function addLesson() {
     cell.appendChild(button);
     row.appendChild(cell);
     lessons.appendChild(row);
+}
+
+function addToCash() {
+    const tableData = [];
+    for (let i = 0; i < lessons.rows.length; i++) {
+        const cells = lessons.rows.item(i).cells;
+        const cellData = [];
+        for(let j = 0; j < cells.length - 1; j++) {           
+            cellData.push(cells.item(j).innerHTML);
+        }
+        tableData.push(cellData.join(", "));
+    }
+    localStorage.setItem("lessons", JSON.stringify(tableData));
+}
+
+function showCash() {
+    console.log(localStorage.getItem("lessons"));
+}
+
+function deleteFromCash() {
+    localStorage.removeItem("lessons");
 }
