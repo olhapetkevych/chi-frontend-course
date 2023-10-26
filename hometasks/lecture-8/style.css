@@ -1,0 +1,36 @@
+body {
+  background-color: ghostwhite;
+  font-family: "Open Sans", sans-serif;
+}
+
+input[type="submit"] {
+  font-family: inherit;
+  font-size: 100%;
+  margin-top: 16px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 180px;
+}
+
+.col-15 {
+  float: left;
+  width: 15%;
+  margin-top: 8px;
+}
+
+.col-85 {
+  float: left;
+  width: 85%;
+  margin-top: 8px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
