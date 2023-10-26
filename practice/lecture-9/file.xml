@@ -1,0 +1,16 @@
+<root>
+    <id>1</id>
+    <name>John Doe</name>
+    <age>25</age>
+    <isStudent>true</isStudent>
+    <courses>
+        <course>Math</course>
+        <course>History</course>
+        <course>English</course>
+    </courses>
+    <address>
+        <street>123 Main Street</street>
+        <city>New York</city>
+        <zipcode>10001</zipcode>
+    </address>
+</root>
