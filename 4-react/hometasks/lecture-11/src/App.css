@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.Task-delete {
+  margin-left: 8px;
+  margin-bottom: 4px;
+}
+
+.Task-input {
+  margin: 8px;
+}
+
+.Tasks-filter {
+  margin: 4px 8px;
+}
+
+.Tasks-list {
+  list-style-type: none;
+}
